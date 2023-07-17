@@ -2,7 +2,7 @@ FROM eclipse-temurin:17.0.7_7-jdk as builder
 
 WORKDIR application
 
-COPY hbase-client-0.0.1-SNAPSHOT.jar application.jar
+ADD ./target/*.jar application.jar
 RUN java -Djarmode=layertools -jar application.jar extract
 
 FROM eclipse-temurin:17.0.7_7-jdk
