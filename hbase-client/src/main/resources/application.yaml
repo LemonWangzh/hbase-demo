@@ -1,2 +1,11 @@
 server:
   port: 8089
+
+
+hbase:
+  config:
+    hbase:
+      zookeeper:
+        property:
+          clientPort: 2181
+        quorum: 127.0.0.1
