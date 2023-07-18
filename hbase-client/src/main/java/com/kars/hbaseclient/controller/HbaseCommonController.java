@@ -3,12 +3,14 @@ package com.kars.hbaseclient.controller;
 import com.kars.data.result.CommonResult;
 import com.kars.hbaseclient.service.HbaseService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Tag(name = "hbase")
 @RestController
-@RequestMapping("/bhase")
+@RequestMapping("/hbase")
 public class HbaseCommonController {
 
     private final HbaseService hbaseService;

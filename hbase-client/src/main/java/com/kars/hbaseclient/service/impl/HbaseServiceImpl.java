@@ -2,6 +2,7 @@ package com.kars.hbaseclient.service.impl;
 
 import com.kars.data.exception.BusinessException;
 import com.kars.data.result.CommonResult;
+import com.kars.hbaseclient.config.HbaseConfig;
 import com.kars.hbaseclient.service.HbaseService;
 import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;

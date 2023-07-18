@@ -22,22 +22,14 @@ public class SpringDocConfig {
         return new OpenAPI()
                 .info(new Info().title("文档中心")
                         .description("API文档中心")
-                        .version("v1.6.6"))
-                .addSecurityItem(new SecurityRequirement().addList("Bearer"))
-                .components(new Components().addSecuritySchemes("Bearer",
-                        new SecurityScheme()
-                                .name("Bearer")
-                                .type(SecurityScheme.Type.HTTP)
-                                .scheme("Bearer")
-                                .bearerFormat("jwt")));
+                        .version("v1.6.6"));
     }
 
     @Bean
     @Lazy(false)
     public List<GroupedOpenApi> apis(SwaggerUiConfigParameters swaggerUiConfigParameters) {
         List<GroupedOpenApi> groups = new ArrayList<>();
-        GroupedOpenApi.builder().pathsToMatch("/hbase/**").group("hbase-base").build();
-        swaggerUiConfigParameters.addGroup("kars/hbase");
+        GroupedOpenApi.builder().pathsToMatch("/hbase/*").group("hbase").build();
         return groups;
     }
 }
