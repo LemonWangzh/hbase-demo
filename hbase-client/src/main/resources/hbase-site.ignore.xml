@@ -52,26 +52,26 @@
     <value>false</value>
   </property>
   <property>
-   <name>hbase.zookeeper.quorum</name>
-   <value>localhost</value>
-</property>
+    <name>hbase.zookeeper.quorum</name>
+    <value>192.168.1.201</value>
+  </property>
   <property>
-   <name>hbase.zookeeper.property.clientPort</name>
-   <value>2181</value>
-</property>
-<property>
-	<name>zookeeper.znode.parent</name>
-	<value>/hbase</value>
-</property>
-<!-- hbase存放数据目录 -->
+    <name>hbase.zookeeper.property.clientPort</name>
+    <value>2181</value>
+  </property>
+  <property>
+    <name>zookeeper.znode.parent</name>
+    <value>/hbase</value>
+  </property>
+  <!-- hbase存放数据目录 -->
   <property>
     <name>hbase.rootdir</name>
-    <value>file:/data/hbasedata</value>
+    <value>file:/data/hbase/data</value>
   </property>
 
   <!-- ZooKeeper数据文件路径 -->
   <property>
     <name>hbase.zookeeper.property.dataDir</name>
-    <value>/data/hbasezkdata</value>
+    <value>/data/hbase/zkdata</value>
   </property>
 </configuration>

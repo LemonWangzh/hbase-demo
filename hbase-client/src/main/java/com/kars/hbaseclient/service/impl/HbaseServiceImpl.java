@@ -15,12 +15,12 @@ import java.util.List;
 @Service
 public class HbaseServiceImpl implements HbaseService {
 
-    private final Connection connection;
     private final Admin admin;
 
     public HbaseServiceImpl(HbaseConfig hbaseConfig) throws IOException {
-        connection = ConnectionFactory.createConnection(hbaseConfig.configuration());
-        admin = connection.getAdmin();
+        try (Connection connection = ConnectionFactory.createConnection(hbaseConfig.configuration())) {
+            admin = connection.getAdmin();
+        }
     }
 
     @Override
