@@ -25,8 +25,8 @@ public class SpringDocConfig {
                         .version("v1.6.6"));
     }
 
-    @Bean
-    @Lazy(false)
+//    @Bean
+//    @Lazy(false)
     public List<GroupedOpenApi> apis(SwaggerUiConfigParameters swaggerUiConfigParameters) {
         List<GroupedOpenApi> groups = new ArrayList<>();
         GroupedOpenApi.builder().pathsToMatch("/hbase/*").group("hbase").build();
